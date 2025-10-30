@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 初始化移动端菜单
     initMobileMenu();
+    
+    // 初始化语言切换
+    initLanguageSwitcher();
 });
 
 // 设置当前页面的导航激活状态
@@ -22,8 +25,14 @@ function setActiveNav() {
     
     navLinks.forEach(link => {
         const linkHref = link.getAttribute('href');
-        if (linkHref === currentPage) {
+        // 移除语言后缀进行比较
+        const cleanHref = linkHref.replace('_zh.html', '.html').replace('index_zh.html', 'index.html');
+        const cleanCurrent = currentPage.replace('_zh.html', '.html').replace('index_zh.html', 'index.html');
+        
+        if (cleanHref === cleanCurrent) {
             link.classList.add('active');
+        } else {
+            link.classList.remove('active');
         }
     });
 }
@@ -117,6 +126,87 @@ function initMobileMenu() {
                 document.body.style.overflow = '';
             }
         });
+    }
+}
+
+// 语言切换功能
+function initLanguageSwitcher() {
+    const enBtn = document.querySelector('.lang-btn[data-lang="en"]');
+    const zhBtn = document.querySelector('.lang-btn[data-lang="zh"]');
+    
+    // 设置当前页面语言的按钮状态
+    setCurrentLanguageButton();
+
+    
+    if (enBtn && zhBtn) {
+        enBtn.addEventListener('click', () => switchToLanguage('en'));
+        zhBtn.addEventListener('click', () => switchToLanguage('zh'));
+    }
+}
+
+function setCurrentLanguageButton() {
+    const currentFile = window.location.pathname.split('/').pop();
+    const isChinesePage = currentFile.includes('_zh.html') || currentFile === 'index_zh.html';
+    
+    const enBtn = document.querySelector('.lang-btn[data-lang="en"]');
+    const zhBtn = document.querySelector('.lang-btn[data-lang="zh"]');
+    
+    if (isChinesePage) {
+        if (enBtn) enBtn.classList.remove('active');
+        if (zhBtn) zhBtn.classList.add('active');
+    } else {
+        if (enBtn) enBtn.classList.add('active');
+        if (zhBtn) zhBtn.classList.remove('active');
+    }
+}
+
+function switchToLanguage(targetLang) {
+    const currentPath = window.location.pathname;
+    const currentFile = currentPath.split('/').pop();
+    
+    // 页面映射关系
+    const pageMap = {
+        // 英文页面 -> 中文页面
+        'index.html': 'index_zh.html',
+        'events.html': 'events_zh.html',
+        'makers.html': 'makers_zh.html',
+        'flopfish.html': 'flopfish_zh.html',
+        'aircraft.html': 'aircraft_zh.html',
+        'team.html': 'team_zh.html',
+        'contact.html': 'contact_zh.html',
+        // 中文页面 -> 英文页面
+        'index_zh.html': 'index.html',
+        'events_zh.html': 'events.html',
+        'makers_zh.html': 'makers.html',
+        'flopfish_zh.html': 'flopfish.html',
+        'aircraft_zh.html': 'aircraft.html',
+        'team_zh.html': 'team.html',
+        'contact_zh.html': 'contact.html'
+    };
+    
+    let targetFile;
+    
+    if (targetLang === 'zh') {
+        // 切换到中文
+        document.body.classList.add('chinese');
+        if (currentFile.includes('_zh.html')) {
+            // 已经在中文页面，不跳转
+            return;
+        }
+        targetFile = pageMap[currentFile] || currentFile.replace('.html', '_zh.html');
+    } else {
+        // 切换到英文
+        document.body.classList.remove('chinese');
+        if (!currentFile.includes('_zh.html')) {
+            // 已经在英文页面，不跳转
+            return;
+        }
+        targetFile = pageMap[currentFile] || currentFile.replace('_zh.html', '.html');
+    }
+    
+    // 确保目标文件存在
+    if (targetFile && targetFile !== currentFile) {
+        window.location.href = targetFile;
     }
 }
 
