@@ -6,11 +6,39 @@
   <title>Events - ISA Liwan Innovation Community</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/script.js" defer></script>
+  <style>
+    /* 专门为 Event 页面的主要图片设置样式，确保优先级 */
+    .event-main-image {
+      height: 400px !important;
+      object-fit: cover !important;
+      width: 100% !important;
+      border-radius: 10px !important;
+      border: 2px solid rgba(0, 168, 255, 0.3) !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    }
+    
+    .event-main-image:hover {
+      transform: scale(1.03) !important;
+      box-shadow: 0 10px 25px rgba(0, 168, 255, 0.5) !important;
+    }
+    
+    /* 移动端调整 */
+    @media (max-width: 768px) {
+      .event-main-image {
+        height: 300px !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="header-container">
       <h1>ISA Liwan Innovation Community</h1>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav>
         <a href="index.html">Home</a>
         <a href="events.html" class="active">Events</a>
@@ -22,7 +50,6 @@
       </nav>
     </div>
   </header>
-
   <div class="container">
     <section class="hero">
       <h2>Our Events</h2>
@@ -38,14 +65,14 @@
         <p><span class="highlight">2025 Achievement:</span> Congratulations to the <span class="highlight">Wuji Team</span> for winning <span class="highlight">First Prize</span> at ICC 2025!</p>
         
         <div class="image-grid">
-          <img src="assets/images/photo(69).jpg" alt="ICC Competition Main">
+          <img src="assets/images/photo(69).jpg" alt="ICC Competition Main" class="event-main-image">
         </div>
         
         <h4>Their Project — "Five-Tone Therapy System"</h4>
         <p>An interdisciplinary design combining traditional <span class="highlight">Five Elements theory</span> with <span class="highlight">music therapy</span>, using sound frequencies to balance emotions and enhance well-being.</p>
         
         <div class="image-grid">
-          <img src="assets/images/photo(46).jpg" alt="Five-Tone Therapy System">
+          <img src="assets/images/photo(46).jpg" alt="Five-Tone Therapy System" class="event-main-image">
         </div>
       </div>
 
