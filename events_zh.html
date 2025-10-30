@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>活动 - ISA荔湾科创社</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+  <style>
+    /* 专门为 Event 页面的主要图片设置样式，确保优先级 */
+    .event-main-image {
+      height: 400px !important;
+      object-fit: cover !important;
+      width: 100% !important;
+      border-radius: 10px !important;
+      border: 2px solid rgba(0, 168, 255, 0.3) !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    }
+    
+    .event-main-image:hover {
+      transform: scale(1.03) !important;
+      box-shadow: 0 10px 25px rgba(0, 168, 255, 0.5) !important;
+    }
+    
+    /* 移动端调整 */
+    @media (max-width: 768px) {
+      .event-main-image {
+        height: 300px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>ISA荔湾科创社</h1>
+      <div class="header-right">
+        <div class="language-switcher">
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn active" data-lang="zh">中文</button>
+        </div>
+        <button class="menu-toggle" aria-label="切换导航">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav>
+        <a href="index_zh.html" class="active">首页</a>
+        <a href="events_zh.html">活动</a>
+        <a href="makers_zh.html">创客社</a>
+        <a href="flopfish_zh.html">翻车鱼乐队</a>
+        <a href="aircraft_zh.html">航模社</a>
+        <a href="team_zh.html">团队</a>
+        <a href="contact_zh.html">联系我们</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <h2 lang="zh">我们的活动</h2>
+      <h2 lang="en">Our Events</h2>
+      <p lang="zh">探索塑造我们创新社群的精彩活动与竞赛</p>
+      <p lang="en">Discover the exciting activities and competitions that shape our innovative community</p>
+    </section>
+
+    <section class="content-card">
+      <h2 lang="zh">✨ 特色活动</h2>
+      <h2 lang="en">✨ Featured Events</h2>
+      
+      <div class="event-item">
+        <h3 lang="zh">ICC全球发明大会中国区</h3>
+        <h3 lang="en">ICC Competition (Invention Convention China)</h3>
+        <p lang="zh">一个鼓励学生将创新想法转化为现实作品的全国性发明赛事。</p>
+        <p lang="en">A creativity-driven invention contest that empowers students to turn innovative ideas into real-world projects.</p>
+        
+        <p><span class="highlight" lang="zh">2025年成就：</span><span class="highlight" lang="en">2025 Achievement:</span> <span lang="zh">恭喜</span><span class="highlight" lang="zh">"无极小队"</span><span lang="zh">荣获</span><span class="highlight" lang="zh">ICC全国一等奖</span><span lang="en">Congratulations to the </span><span class="highlight" lang="en">Wuji Team</span><span lang="en"> for winning </span><span class="highlight" lang="en">First Prize</span><span lang="en"> at ICC 2025!</span></p>
+        
+        <div class="image-grid">
+          <img src="assets/images/photo(69).jpg" alt="ICC竞赛主图" class="event-main-image">
+        </div>
+        
+        <h4 lang="zh">他们的项目《太和·五音疗法系统》</h4>
+        <h4 lang="en">Their Project — "Five-Tone Therapy System"</h4>
+        <p lang="zh">结合了传统<span class="highlight">中医五音疗法</span>的跨学科设计，利用五音平衡情绪，提升心理健康。</p>
+        <p lang="en">An interdisciplinary design combining traditional <span class="highlight">Five Elements theory</span> with <span class="highlight">music therapy</span>, using sound frequencies to balance emotions and enhance well-being.</p>
+        
+        <div class="image-grid">
+          <img src="assets/images/photo(46).jpg" alt="五音疗法系统" class="event-main-image">
+        </div>
+      </div>
+
+      <div class="event-item">
+        <h3 lang="zh">往届ICC活动</h3>
+        <h3 lang="en">Past ICC Events</h3>
+        <div class="image-grid">
+          <div>
+            <p lang="zh">ICC 2024</p>
+            <p lang="en">ICC 2024</p>
+            <img src="assets/images/photo(10).jpg" alt="ICC 2024">
+          </div>
+          <div>
+            <p lang="zh">ICC 2025</p>
+            <p lang="en">ICC 2025</p>
+            <img src="assets/images/photo(47).jpg" alt="ICC 2025">
+          </div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <h3 lang="zh">Arduino国际认证</h3>
+        <h3 lang="en">Arduino International Certification</h3>
+        <p lang="zh">全球认可的创客技能认证项目，通过动手电子编程系统地培养学生的科技能力。</p>
+        <p lang="en">A globally recognized certification program that builds systematic maker skills through hands-on electronic programming.</p>
+        
+        <p lang="zh">成员可学习<span class="highlight">编程、电路设计与创意电子制作</span>。</p>
+        <p lang="en">This certification allows members to develop a solid foundation in <span class="highlight">coding</span>, <span class="highlight">circuit design</span>, and <span class="highlight">creative electronics</span>.</p>
+      </div>
+
+      <div class="event-item">
+        <h3 lang="zh">深圳Maker Faire创客嘉年华</h3>
+        <h3 lang="en">Maker Faire (Shenzhen)</h3>
+        <p lang="zh">全球创意与科技的盛会，我们的成员在现场展示作品，与世界各地创客交流。</p>
+        <p lang="en">A global celebration of creativity and technology where our members showcase their projects and exchange ideas with makers from around the world.</p>
+        
+        <div class="image-grid">
+          <img src="assets/images/photo(23).jpg" alt="创客嘉年华">
+          <img src="assets/images/photo(24).jpg" alt="创客嘉年华">
+          <img src="assets/images/photo(25).jpg" alt="创客嘉年华">
+          <img src="assets/images/photo(26).jpg" alt="创客嘉年华">
+        </div>
+      </div>
+
+      <div class="event-item">
+        <h3 lang="zh">ISA DAY 校园展示活动</h3>
+        <h3 lang="en">ISA DAY (School Event)</h3>
+        <p lang="zh">面向全校展示社团成果，传播STEAM与创新精神。</p>
+        <p lang="en">A campus-wide event where the club presents its achievements and promotes the spirit of STEAM and innovation to the entire school community.</p>
+        
+        <div class="image-grid">
+          <img src="assets/images/photo(28).jpg" alt="ISA DAY">
+          <img src="assets/images/photo(29).jpg" alt="ISA DAY">
+          <img src="assets/images/photo(30).jpg" alt="ISA DAY">
+          <img src="assets/images/photo(31).jpg" alt="ISA DAY">
+          <img src="assets/images/photo(32).jpg" alt="ISA DAY">
+        </div>
+      </div>
+
+      <div class="event-item">
+        <h3 lang="zh">心意工坊</h3>
+        <h3 lang="en">Heartfelt Workshop</h3>
+        <p lang="zh">每月一次的创意工坊活动，结合科技与手工，让成员通过作品表达心意与创意。</p>
+        <p lang="en">A monthly creative workshop where members use technology and craftsmanship to express care and creativity — turning imagination into meaningful gifts.</p>
+        
+        <div class="image-grid">
+          <img src="assets/images/photo(12).jpg" alt="心意工坊">
+          <img src="assets/images/photo(15).jpg" alt="心意工坊">
+          <img src="assets/images/photo(17).jpg" alt="心意工坊">
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <h2 lang="zh">🔮 即将推出</h2>
+      <h2 lang="en">🔮 Future Activity</h2>
+      <h3 lang="zh">创客等级测试</h3>
+      <h3 lang="en">Internal Maker's Level Test</h3>
+      <p lang="zh">社内测试活动，用于评估成员在<span class="highlight">3D打印、激光切割、Arduino编程与创新设计思维</span>方面的技能。</p>
+      <p lang="en">An upcoming in-house evaluation designed to recognize members' skills in <span class="highlight">3D printing</span>, <span class="highlight">laser cutting</span>, <span class="highlight">Arduino programming</span>, and <span class="highlight">innovative design thinking</span>.</p>
+    </section>
+  </div>
+
+  <footer>
+    <div class="contact-info">
+      <p>📞 <strong lang="zh">联系方式：</strong><strong lang="en">Contact:</strong> WeChat: liaoyifeng2012 <span lang="zh">（社长 Laurence）</span><span lang="en">(Club Leader: Laurence)</span></p>
+      <p>📍 <strong lang="zh">地址：</strong><strong lang="en">Location:</strong> ISA荔湾科创中心 (F103)</p>
+    </div>
+    <p>&copy; 2025 ISA荔湾科创社<span lang="en">ISA Liwan Innovation Community</span>. <span lang="zh">保留所有权利</span><span lang="en">All rights reserved</span>.</p>
+  </footer>
+</body>
+</html>
