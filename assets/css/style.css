@@ -711,11 +711,11 @@ footer {
 }
 
 body.chinese [lang="en"] {
-  display: none;
+  display: block;
 }
 
 body.chinese [lang="zh"] {
-  display: block;
+  display: none;
 }
 /* === 中文模式下导航栏优化 === */
 body.chinese nav a {
