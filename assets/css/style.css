@@ -707,15 +707,15 @@ footer {
 
 /* 语言切换相关 */
 [lang="zh"] {
-  display: block;
+  display: none;
 }
 
 body.chinese [lang="en"] {
-  display: block;
+  display: none;
 }
 
 body.chinese [lang="zh"] {
-  display: none;
+  display: block;
 }
 /* === 中文模式下导航栏优化 === */
 body.chinese nav a {
