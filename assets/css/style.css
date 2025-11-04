@@ -707,7 +707,7 @@ footer {
 
 /* 语言切换相关 */
 [lang="zh"] {
-  display: none;
+  display: block;
 }
 
 body.chinese [lang="en"] {
